@@ -12,6 +12,7 @@ CLASES = [
     ("21/10", "Lezione 2: edad, verbos en -are, números 21–100", "2A (págs. 27–29)"),
     ("28/10", "Trabajos, fare, artículo determinado", "2B (págs. 30–31)"),
     ("04/11", "Plural de los verbos, preposiciones a / in", "2C (págs. 32–33)"),
+    ("11/11", "Datos personales, direcciones, formal (Suo)", "2D (págs. 34–35)"),
 ]
 
 
@@ -581,6 +582,95 @@ def clases():
     s += ascolta(ASCOLTA[7])
     s += ejercicios(ESERCIZI[7])
     s += tarea("pág. 33, ej. 1d (resuelta en el punto 8) · pág. 143, ej. 4, 5 y 6 · pág. 192, ej. 9 a 13 · pág. 193, ej. 15 y 16.")
+    # ================================================================ CLASE 8
+    s += [h1("Clase 8 — 11/11"), info("Libro: Lezione 2D <i>Qual è il tuo numero di telefono?</i> (págs. 34–35) · Vocabulario pág. 162"),
+          sec("En clase"),
+          h2("1. Los idiomas son masculinos")]
+    s += [p("Los nombres de idiomas siempre son <b>masculinos</b>: <i>l'italiano, il cinese, lo spagnolo, il tedesco</i>. "
+            "<i>Studio <b>il</b> cinese. · Un corso <b>di</b> cinese.</i>")]
+    s += nota("<b>il corso</b> = curso (<i>un corso di lingua</i>). También es el nombre de una avenida principal (punto 3).")
+
+    s += [h2("2. Datos personales (vocabulario, pág. 162)")]
+    s += tabla([["Pregunta", "Respuesta / ejemplo"],
+                ["Qual è il tuo numero di telefono?", "Il mio numero è 333 8154871."],
+                ["Qual è la tua mail?", "s.fantini<b>@</b>gmail<b>.</b>com → esse punto fantini <b>chiocciola</b> gmail <b>punto</b> com"],
+                ["Qual è il tuo indirizzo? · Dove abiti?", "Via Giuseppe Verdi 9. · Abito in via Corrientes 334."],
+                ["Hai un sito internet?", "Sì: www.studiovinci.com → vu vu vu punto studiovinci punto com"]],
+               [62, 108])
+    s += tabla([["Italiano", "Español"],
+                ["il biglietto da visita", "tarjeta personal"], ["la chiocciola (@)", "arroba (se dice \"kióchola\")"],
+                ["il punto (.)", "punto"], ["il CAP", "<b>C</b>odice di <b>A</b>vviamento <b>P</b>ostale = código postal"],
+                ["il telefono fisso / il cellulare", "teléfono fijo / celular"], ["il sito web", "página web"]],
+               [55, 115])
+    s += sapevi("en Japón y otros países de Asia la tarjeta personal se da y se recibe con las dos manos, mirándola un momento: "
+                "guardarla sin leerla se considera descortés.")
+
+    s += [h2("3. Calles: via, viale, corso, piazza")]
+    s += tabla([["Italiano", "Qué es", "Ejemplo"],
+                ["<b>via</b>", "calle (la palabra común; <i>strada</i> es \"calle/camino\" en general)", "via Massa 14"],
+                ["<b>viale</b>", "avenida ancha con árboles (en el medio o a los costados)", "viale dei Mille"],
+                ["<b>corso</b>", "avenida principal, en general céntrica y comercial", "Corso Vittorio Emanuele"],
+                ["<b>piazza</b>", "plaza", "piazza Toti 15"]],
+               [22, 95, 53])
+    s += nota("en la dirección, el número va <b>después</b> del nombre de la calle, como en Argentina: <i>via Massa <b>14</b></i>.")
+
+    s += [h2("4. Preposiciones: <i>a</i> ciudad · <i>in</i> calle (Focus, pág. 34)")]
+    s += tabla([["Pregunta", "Respuesta"],
+                ["Dove abiti?", "Abito <b>a</b> Córdoba. · Abito <b>a</b> San Francisco. (ciudad)"],
+                ["", "Abito <b>in</b> via Corrientes 334. · <b>In</b> piazza Toti 15. (calle / plaza)"],
+                ["Qual è il tuo indirizzo?", "Via Corrientes 334. (<b>sin</b> preposición)"]],
+               [50, 120])
+    s += nota("con países en plural va <b>negli</b>: <i>Abito <b>negli</b> Stati Uniti</i> (in + gli). Lo pide la tarea, pág. 143.")
+
+    s += [h2("5. Decir el número de teléfono"),
+          p("Como en español: cifra por cifra o de a pares.")]
+    s += tabla([["Número", "Cifra por cifra", "De a pares"],
+                ["06 61713210", "zero – sei · sei – uno – sette – uno – tre – due – uno – zero",
+                 "zero sei · sessantuno – settantuno – trentadue – dieci"]],
+               [28, 80, 62])
+    s += sapevi("en Italia los fijos empiezan con <b>0</b> (06 = Roma, 02 = Milano, 055 = Firenze) y los celulares con <b>3</b> (333, 347...). "
+                "El CAP tiene siempre 5 cifras.")
+
+    s += [h2("6. Formal e informal: cuándo y cómo")]
+    s += li("<b>Lei</b> con mayúscula = usted.",
+            "<b>Formal</b>: con alguien que no conozco y en situaciones de servicio o trabajo (atención al público, un cliente, un jefe).",
+            "<b>Informal</b>: con un compañero de trabajo, amigos, familia, aunque estemos en el trabajo.")
+    s += tabla([["Informal (tu)", "Formal (Lei)"],
+                ["Dove abiti?", "Dove abita?"], ["Dove vai?", "Dove va?"],
+                ["Qual è il <b>tuo</b> indirizzo?", "Qual è il <b>Suo</b> indirizzo?"],
+                ["Qual è la <b>tua</b> mail?", "Qual è la <b>Sua</b> mail?"],
+                ["Quanti anni <b>hai</b>?", "Quanti anni <b>ha</b>?"], ["Che lavoro <b>fai</b>?", "Che lavoro <b>fa</b>?"],
+                ["Che cosa ti posso servire?", "Che cosa <b>Le</b> posso servire?"]],
+               [80, 80])
+    s += nota("<b>tuo / tua</b> → <b>Suo / Sua</b> (con mayúscula). <b>Le</b> = \"le\" (a usted): <i>Che cosa Le posso servire?</i> = ¿Qué le puedo servir?")
+    s += corr("en el apunte quedó \"abbene → hai → ha\": es <b>avere</b>: <i>hai</i> (tu) → <i>ha</i> (Lei).")
+
+    s += [sec("Del libro"),
+          h2("7. En la secretaría de una escuela de idiomas (pág. 34–35)")]
+    s += tabla([["Frase", "Español"],
+                ["Buongiorno, <b>vorrei iscrivermi</b> a un corso di cinese.", "Buen día, quisiera inscribirme a un curso de chino."],
+                ["Bene, allora adesso facciamo l'iscrizione. Lei si chiama...?", "Bien, entonces ahora hacemos la inscripción. ¿Usted se llama...?"],
+                ["Abita a Roma? — Sì.", "¿Vive en Roma? — Sí."],
+                ["E qual è il Suo indirizzo? — Piazza Giuseppe Verdi 9.", "¿Y cuál es su dirección? — Piazza Giuseppe Verdi 9."],
+                ["Il mio numero di telefono è...", "Mi número de teléfono es..."],
+                ["E perché fa questo corso?", "¿Y por qué hace este curso?"]],
+               [88, 82])
+    s += nota("<b>vorrei</b> = quisiera. Es la forma amable de <i>volere</i> (condicional): se usa para pedir algo. "
+              "<b>iscriversi</b> = inscribirse; es reflexivo como <i>chiamarsi</i>: <i>vorrei iscriver<b>mi</b></i>.")
+
+    s += [h2("8. <i>Dieci domande personali</i> (pág. 35)")]
+    s += tabla([["Informal", "Formal", "Informal", "Formal"],
+                ["Dove abiti?", "Dove abita?", "Perché studi italiano?", "Perché studia italiano?"],
+                ["Quanti anni hai?", "Quanti anni ha?", "Qual è il tuo numero?", "Qual è il Suo numero?"],
+                ["Che lavoro fai?", "Che lavoro fa?", "Qual è la tua mail?", "Qual è la Sua mail?"],
+                ["Dove lavori?", "Dove lavora?", "Qual è il tuo indirizzo?", "Qual è il Suo indirizzo?"],
+                ["Che lingue parli?", "Che lingue parla?", "Sei sposato/a?", "È sposato/a?"]],
+               [38, 38, 47, 47])
+    s += nota("<b>sposato / sposata</b> = casado/a. Es la única de las diez que se responde con <i>sì / no</i>.")
+    s += LETTURE[8]
+    s += ascolta(ASCOLTA[8])
+    s += ejercicios(ESERCIZI[8])
+    s += tarea("pág. 143, ej. 8, 9 y 10 · pág. 193, ej. 17 y 18 · pág. 194, ej. 19 a 24 (el 22 es con audio).")
     return s
 
 

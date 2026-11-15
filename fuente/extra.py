@@ -26,6 +26,9 @@ ASCOLTA = {
     ["Película", "<b>Ferrari</b> — Michael Mann (2023)", "Enzo Ferrari en Modena, en 1957. Está en inglés, pero muestra la Motor Valley de la Lettura."]],
 7: [["Canción", "<b>Nel blu dipinto di blu (Volare)</b> — Domenico Modugno (1958)", "Modugno era de Polignano a Mare, en Puglia; ahí tiene una estatua. Una de las canciones italianas más famosas del mundo."],
     ["Película", "<b>Mine vaganti</b> — Ferzan Özpetek (2010)", "Una familia con una fábrica de pasta en Lecce: trabajo, familia y Puglia."]],
+8: [["Canción", "<b>Via con me</b> — Paolo Conte (1981)", "Juego de palabras: acá <i>via</i> no es \"calle\" sino \"lejos\" (<i>vieni via con me</i> = vení conmigo, vámonos)."],
+    ["Película", "<b>Il postino</b> — Michael Radford y Massimo Troisi (1994)", "Un cartero de una isla del sur lleva las cartas a Pablo Neruda: direcciones, conversaciones y mucho italiano lento y claro."],
+    ["Práctica", "Decí en voz alta tu dirección, tu mail y tu número", "<i>Abito a Córdoba, in via... · ...chiocciola gmail punto com · tre – cinque – uno...</i>"]],
 }
 
 
@@ -67,7 +70,7 @@ ESERCIZI = {
      "Questo · Questa · Questi · Queste"),
     ("Preguntá la edad en informal y en formal.", "Quanti anni hai? · Quanti anni ha?"),
     ("Corregí las mayúsculas: <i>sono argentino, di córdoba. parlo Spagnolo.</i>", "Sono argentino, di Córdoba. Parlo spagnolo."),
-    ("Respondé: <i>Perché studi l'italiano?</i>", "Libre. Ej.: Perché amo l'Italia.")],
+    ("Respondé: <i>Perché studi l'italiano?</i>", "Libre. Ej.: Perché amo l'Italia. / Perché ho una bisnonna italiana.")],
 6: [("<i>il / lo / l' / la</i>: __ cameriere · __ studente · __ operaio · __ segretaria · __ insegnante · __ zaino.",
      "il · lo · l' · la · l' · lo"),
     ("Completá con <i>fare</i>: <i>Io ____ l'ingegnere. Tu che lavoro ____? Lei ____ la cuoca.</i>", "faccio · fai · fa"),
@@ -83,6 +86,16 @@ ESERCIZI = {
     ("Corregí: <i>Lui lavori in Francia.</i>", "Lui lavora in Francia."),
     ("Traducí: <i>A los 30 años.</i> · <i>Nací en Córdoba, en Argentina.</i>", "A 30 anni. · Sono nato a Córdoba, in Argentina."),
     ("¿<i>e</i> o <i>ed</i>?: <i>Isabella ha 22 anni __ è una cuoca.</i>", "ed")],
+8: [("Pasá a formal: <i>Abiti a Roma? · Qual è il tuo indirizzo? · Che lavoro fai? · Quanti anni hai?</i>",
+     "Abita a Roma? · Qual è il Suo indirizzo? · Che lavoro fa? · Quanti anni ha?"),
+    ("<i>a</i>, <i>in</i> o nada: <i>Abito __ Córdoba. Abito __ via Corrientes 334. Il mio indirizzo è __ via Massa 14. Abito __ Stati Uniti.</i>",
+     "a · in · (nada) · negli"),
+    ("Leé en voz alta: <i>mario.rossi@gmail.com</i> y <i>www.dieci.it</i>",
+     "mario punto rossi chiocciola gmail punto com · vu vu vu punto dieci punto it"),
+    ("Completá con <i>tuo / tua / Suo / Sua</i>: <i>Qual è la __ mail?</i> (informal) · <i>Qual è il __ indirizzo?</i> (formal)", "tua · Suo"),
+    ("¿<i>via</i>, <i>viale</i>, <i>corso</i> o <i>piazza</i>? Una plaza · una calle común · una avenida con árboles · la avenida principal.",
+     "piazza · via · viale · corso"),
+    ("Traducí: <i>Quisiera inscribirme a un curso de italiano.</i>", "Vorrei iscrivermi a un corso di italiano.")],
 }
 
 
