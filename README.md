@@ -1,5 +1,7 @@
 # Italiano — Carpeta de clases
 
+**📥 Descargar la última versión:** https://github.com/matiasacc/Italiano/releases/latest/download/Italiano_carpeta.pdf
+
 Apuntes de las clases de italiano, ordenados clase por clase, con el libro *Dieci A1* (Alma Edizioni).
 
 - **`Italiano_carpeta.pdf`**: la carpeta para imprimir en doble faz. Cada clase arranca en página impar.
