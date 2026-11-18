@@ -1,0 +1,26 @@
+name: Publicar carpeta
+
+on:
+  push:
+    branches: [main]
+    paths: [Italiano_carpeta.pdf]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Crear release con el PDF
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          FECHA=$(date -u +%Y-%m-%d)
+          TAG="carpeta-${FECHA}-${GITHUB_RUN_NUMBER}"
+          gh release create "$TAG" Italiano_carpeta.pdf \
+            --title "Carpeta de italiano — ${FECHA}" \
+            --notes "Última versión de la carpeta. Link fijo: /releases/latest/download/Italiano_carpeta.pdf" \
+            --latest
