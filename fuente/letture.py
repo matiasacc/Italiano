@@ -212,3 +212,35 @@ LETTURE[8] = lettura("In segreteria, a Firenze",
      "¿Por qué Martín dice <i>a Firenze</i> pero <i>in viale dei Mille</i>?"],
     "en Italia casi todos los centros históricos se organizan alrededor de una <i>piazza</i>. "
     "En la Piazza del Campo de Siena se corre el Palio, una carrera de caballos que se hace dos veces por año, en julio y en agosto.")
+
+LETTURE[9] = lettura("Un caffè al Gambrinus, a Napoli",
+    [esc("Napoli, Piazza Trieste e Trento. Il Gran Caffè Gambrinus è uno dei bar più famosi d'Italia: è del 1860. "
+         "Sono le otto di mattina. Paolo e Camilla entrano al bar."),
+     dialogo([("Barista", "Buongiorno, ragazzi! Che cosa prendete?"),
+              ("Camilla", "Buongiorno! Per me un cappuccino e un cornetto alla crema, per favore."),
+              ("Paolo", "Io prendo un caffè. Un espresso, naturalmente!"),
+              ("Camilla", "Ma come? Un caffè e basta? Non mangi niente?"),
+              ("Paolo", "No, a colazione bevo solo un caffè. E poi... un altro caffè alle undici!"),
+              ("Barista", "Ecco il cappuccino, il cornetto e il caffè. E due bicchieri d'acqua."),
+              ("Camilla", "Grazie mille! Mmm... il cornetto è buonissimo."),
+              ("Paolo", "Scusi, quant'è?"),
+              ("Barista", "Dunque... un caffè, un cappuccino e un cornetto: quattro euro e sessanta."),
+              ("Camilla", "Aspetta, Paolo, offro io!"),
+              ("Paolo", "Ma no! Oggi offro io, domani offri tu. E... un caffè sospeso, per favore."),
+              ("Barista", "Bravo! Allora cinque euro e ottanta."),
+              ("Camilla", "Un caffè sospeso? Che cos'è?"),
+              ("Paolo", "È una tradizione di Napoli: pago due caffè, ma bevo solo un caffè. "
+                        "L'altro caffè è per una persona che non ha soldi.")]),
+     "In Italia il bar è il posto della colazione. Gli italiani bevono il caffè in piedi, al banco, in due minuti, "
+     "e parlano con il barista come con un amico. E il cappuccino? Solo la mattina: dopo pranzo, mai!"],
+    [["naturalmente", "obviamente"], ["e basta", "y nada más"], ["non mangi niente", "no comés nada"],
+     ["un altro caffè", "otro café"], ["alle undici", "a las once"], ["buonissimo", "buenísimo"],
+     ["Aspetta!", "¡Esperá!"], ["oggi / domani", "hoy / mañana"], ["sospeso", "suspendido, \"en espera\""],
+     ["i soldi", "la plata, el dinero"], ["in piedi, al banco", "parado, en la barra"],
+     ["dopo pranzo, mai", "después del almuerzo, nunca"]],
+    ["¿Qué pide cada uno? ¿Por qué Paolo no come nada?",
+     "¿Cuánto pagan antes y después del <i>caffè sospeso</i>? Escribilo con números y en letras.",
+     "Buscá en el texto tres sustantivos en plural y escribí su singular."],
+    "el <b>caffè sospeso</b> nació en Nápoles: dejás pago un café para alguien que no puede pagarlo, "
+    "y el próximo que lo pide lo toma gratis. Y en Italia pedir un <i>cappuccino</i> después de comer "
+    "(sobre todo con la cena) es la forma más rápida de que te reconozcan como turista.")

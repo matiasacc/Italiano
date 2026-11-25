@@ -109,3 +109,19 @@ def construir(story, archivo, titulo, pie_txt, impar=True):
             break
         blancos[pares[0]] = True
     return doc.inicios
+
+
+def qr_img(url, nombre, size=20 * mm):
+    """Genera un QR en qr/<nombre>.png y devuelve el flowable Image."""
+    import os
+    import qrcode
+    from reportlab.platypus import Image
+    os.makedirs("qr", exist_ok=True)
+    ruta = f"qr/{nombre}.png"
+    qrcode.make(url, border=1).save(ruta)
+    return Image(ruta, width=size, height=size)
+
+
+def pron(filas, anchos=(45, 45, 80)):
+    """Tabla Italiano | Se pronuncia | Español (sílaba fuerte en mayúscula)."""
+    return tabla([["Italiano", "Se pronuncia", "Español"]] + filas, list(anchos))

@@ -12,4 +12,4 @@ Apuntes de las clases de italiano, ordenados clase por clase, con el libro *Diec
   - `letture.py`: textos de lectura · `extra.py`: canciones/películas, ejercicios y soluciones.
   - `verbos.py`: anexo de verbos · `comun.py`: estilos y armado (página impar para doble faz).
 
-Para regenerar: `cd fuente && pip install reportlab && python3 carpeta.py`
+Para regenerar: `cd fuente && pip install reportlab qrcode && python3 carpeta.py`

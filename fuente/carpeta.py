@@ -1,6 +1,6 @@
 from comun import *
 from letture import LETTURE
-from extra import ASCOLTA, ascolta, ESERCIZI, ejercicios, soluciones
+from extra import ASCOLTA, ascolta, ASCOLTA_QR, ascolta_qr, ESERCIZI, ejercicios, soluciones
 from verbos import VERBOS
 
 # (fecha, tema, libro) para el índice
@@ -13,6 +13,7 @@ CLASES = [
     ("28/10", "Trabajos, fare, artículo determinado", "2B (págs. 30–31)"),
     ("04/11", "Plural de los verbos, preposiciones a / in", "2C (págs. 32–33)"),
     ("11/11", "Datos personales, direcciones, formal (Suo)", "2D (págs. 34–35)"),
+    ("18/11", "Al bar: desayuno, prendere, plural, precios", "3A (págs. 39–41)"),
 ]
 
 
@@ -671,6 +672,128 @@ def clases():
     s += ascolta(ASCOLTA[8])
     s += ejercicios(ESERCIZI[8])
     s += tarea("pág. 143, ej. 8, 9 y 10 · pág. 193, ej. 17 y 18 · pág. 194, ej. 19 a 24 (el 22 es con audio).")
+    # ================================================================ CLASE 9
+    s += [h1("Clase 9 — 18/11"), info("Libro: Lezione 3 <i>Buon appetito!</i> · 3A <i>Al bar</i> (págs. 39–41)"),
+          sec("En clase"),
+          h2("1. La colazione (el desayuno)"),
+          p("La sílaba fuerte va en MAYÚSCULA en la columna de pronunciación.")]
+    s += [p("<b>Mangio</b> (como):")]
+    s += pron([["il cornetto", "kor-NET-to", "medialuna"],
+               ["la pasta", "PAS-ta", "factura (en el bar); también \"fideos\""],
+               ["i biscotti", "bis-KOT-ti", "galletitas dulces"],
+               ["i grissini · i cracker", "gris-SI-ni · KREK-ker", "grisines · galletitas saladas"],
+               ["i cereali", "che-re-A-li", "cereales"],
+               ["pane e burro", "PA-ne e BUR-ro", "pan y manteca"],
+               ["lo yogurt", "IO-gurt", "yogur"],
+               ["il panino", "pa-NI-no", "sándwich (pan con algo adentro)"],
+               ["il toast", "TOST", "tostado"],
+               ["l'uovo · le uova", "UO-vo · UO-va", "huevo · huevos"]])
+    s += [p("<b>Bevo</b> (tomo):")]
+    s += pron([["il caffè · l'espresso", "kaf-FÈ · es-PRES-so", "café (siempre es un espresso)"],
+               ["il cappuccino", "kap-pu-CHI-no", "capuchino"],
+               ["una tazza di latte", "TAT-tsa di LAT-te", "una taza de leche"],
+               ["il tè", "TÈ", "té"],
+               ["la spremuta", "spre-MU-ta", "exprimido fresco (de naranja)"],
+               ["il succo", "SUK-ko", "jugo envasado, de botella"],
+               ["il bicchiere d'acqua", "bik-KIE-re DAK-kua", "vaso de agua"]])
+    s += [p("Ej.: <i>Un panino <b>con</b> prosciutto</i> (pro-SHUT-to) = un sándwich de jamón crudo. "
+            "<i>A colazione mangio i biscotti e bevo un caffè.</i>")]
+    s += corr("<i>A colazione mangio <b>un biscotto</b></i> (uno solo) o <i><b>i / dei</b> biscotti</i> (varios). "
+              "\"Un biscotti\" mezcla singular y plural.")
+    s += sapevi("el <b>Parmigiano Reggiano</b> (par-mi-YA-no re-DYA-no) tiene denominación de origen: solo se hace en Parma, Reggio Emilia, "
+                "Modena y parte de Bologna y Mantova. <i>Parmesan</i> es el nombre que se usa fuera de Italia, muchas veces para imitaciones. "
+                "Una rueda pesa unos 40 kg y madura mínimo 12 meses.")
+
+    s += [h2("2. <i>Come stai?</i> (¿Cómo estás?)")]
+    s += pron([["Benissimo!", "be-NIS-si-mo", "¡Buenísimo! (superlativo: -issimo = -ísimo)"],
+               ["Molto bene", "MOL-to BE-ne", "Muy bien"],
+               ["Bene", "BE-ne", "Bien"],
+               ["Così così", "ko-SÌ ko-SÌ", "Más o menos (como el <i>so so</i> inglés)"],
+               ["Male", "MA-le", "Mal"]])
+    s += [p("<i>Come stai?</i> (informal) · <i>Come sta?</i> (formal) · <i>Come va?</i> (¿Cómo va?, sirve para los dos).")]
+    s += nota("se responde agradeciendo la pregunta: <i>Bene, <b>grazie</b>. E tu?</i>")
+
+    s += [h2("3. Cortesía: el italiano es más \"educado\"")]
+    s += li("<b>per favore</b> y <b>grazie</b> se usan siempre, incluso entre amigos.",
+            "<b>vorrei</b> (vor-REI) = quisiera: <i>Vorrei un caffè. · Vorrei farti una domanda</i> (= quisiera hacerte una pregunta).",
+            "<b>voglio</b> (VO-llo) = quiero: para pedir algo <b>no se usa</b>, suena muy directo, casi maleducado.")
+
+    s += [h2("4. Al bar: frases clave")]
+    s += pron([["Che cosa prendi / prende?", "ke KO-sa PREN-di", "¿Qué tomás / toma?"],
+               ["Per me un cappuccino.", "per ME", "Para mí un capuchino."],
+               ["Io prendo un caffè.", "PREN-do", "Yo tomo un café."],
+               ["Quant'è?", "kuan-TÈ", "¿Cuánto es?"],
+               ["Offro io!", "OF-fro I-o", "¡Invito yo!"],
+               ["Ecco...", "EK-ko", "Acá tenés / aquí está"],
+               ["Dunque...", "DUN-kue", "Entonces... / bueno..."],
+               ["Ma come?", "ma KO-me", "¿Pero cómo?"]],
+              (50, 35, 85))
+    s += nota("<b>Offro io</b>, con el sujeto al final, pone el énfasis en <i>io</i> (\"¡invito YO!\"). "
+              "<b>Ecco</b> no tiene traducción exacta: sirve para mostrar o entregar algo (<i>Ecco il caffè!</i>). "
+              "Y <b>come me</b> = \"como yo\": después de <i>come</i> y <i>per</i> va <b>me</b>, no <i>io</i> (<i>per me, come me</i>).")
+    s += corr("es <b>caffettiera</b> (kaf-fet-TIE-ra), la cafetera. En el apunte quedó \"caffettera\".")
+    s += sapevi("la cafetera italiana clásica es la <b>Moka</b>, inventada por Alfonso Bialetti en 1933. "
+                "En casa los italianos toman café de moka; el espresso de máquina es del bar.")
+
+    s += [h2("5. Euro y precios")]
+    s += li("<b>euro</b> no cambia en plural: <i>un euro, due euro, dieci euro</i>.",
+            "1 € = 100 <b>centesimi</b> (chen-TE-si-mi).")
+    s += tabla([["Precio", "Se dice"],
+                ["0,80 €", "ottanta centesimi"], ["1 €", "un euro"], ["2 €", "due euro"],
+                ["2,50 €", "due euro e cinquanta (centesimi)"], ["8,70 €", "otto euro e settanta"]],
+               [30, 90])
+
+    s += [h2("6. Plural de los sustantivos")]
+    s += tabla([["Singular", "Plural", "Regla", "Ejemplo"],
+                ["-o (masc.)", "-i", "cambia", "il cornetto → i cornetti"],
+                ["-e (masc. / fem.)", "-i", "cambia", "il bicchiere → i bicchieri · la lezione → le lezioni"],
+                ["-a (fem.)", "-e", "cambia", "la cosa → le cose · la casa → le case"],
+                ["acento final", "=", "no cambia", "il caffè → i caffè · la città → le città · l'università → le università"],
+                ["consonante final / extranjeras", "=", "no cambia", "il bar → i bar · il toast → i toast · lo yogurt → gli yogurt"]],
+               [38, 15, 22, 95])
+    s += [p("Las palabras extranjeras se perciben como tales y no cambian: <i>il mate → i mate · l'asado → gli asado</i>.")]
+    s += nota("el artículo sí cambia: <b>il → i · lo / l' (masc.) → gli · la / l' (fem.) → le</b>. "
+              "<i>bicchieri</i> se pronuncia bik-KIE-ri: la <i>ch</i> suena \"k\".")
+
+    s += [sec("Del libro"),
+          h2("7. Verbo <i>prendere</i> (tomar) — regular en -ere")]
+    s += tabla([["Persona", "prendere", "Se pronuncia", "Desinenza"],
+                ["io", "prendo", "PREN-do", "-o"], ["tu", "prendi", "PREN-di", "-i"],
+                ["lui / lei / Lei", "prende", "PREN-de", "<b>-e</b>"], ["noi", "prendiamo", "pren-DIA-mo", "-iamo"],
+                ["voi", "prendete", "pren-DE-te", "<b>-ete</b>"], ["loro", "prendono", "PREN-do-no", "<b>-ono</b>"]],
+               [35, 35, 35, 30])
+    s += nota("comparado con <i>parlare</i> solo cambian tres terminaciones: <i>parla → prend<b>e</b> · parlate → prend<b>ete</b> · parlano → prend<b>ono</b></i>. "
+              "<i>Prendere</i> es \"tomar\" en el bar: <i>prendo un caffè</i> (no se usa <i>bere</i> para pedir).")
+
+    s += [h2("8. Diálogo <i>Al bar</i> (pág. 41)")]
+    s += tabla([["Italiano", "Español"],
+                ["Ciao Paolo! — Camilla, ciao! Come va? — Benissimo, e tu come stai? — Bene, grazie.",
+                 "¡Hola Paolo! — ¡Camilla, hola! ¿Cómo va? — Buenísimo, ¿y vos cómo estás? — Bien, gracias."],
+                ["Prendiamo un caffè? Hai tempo? — Sì, con piacere!", "¿Tomamos un café? ¿Tenés tiempo? — ¡Sí, con gusto!"],
+                ["Un cornetto, per favore. Tu che cosa prendi?", "Una medialuna, por favor. ¿Vos qué tomás?"],
+                ["Dunque... per me un cornetto e una pasta alla crema.", "Bueno... para mí una medialuna y una factura con crema."],
+                ["Ma come, prendi due cose?! — Eh sì, ho fame!", "¿Pero cómo, pedís dos cosas?! — ¡Y sí, tengo hambre!"],
+                ["E da bere cosa prendete? — Io prendo un caffè. — Per me un cappuccino.",
+                 "¿Y de tomar qué piden? — Yo un café. — Para mí un capuchino."],
+                ["E anche due bicchieri d'acqua. Quant'è? — Otto euro e settanta.",
+                 "Y también dos vasos de agua. ¿Cuánto es? — Ocho euros con setenta."],
+                ["Camilla, aspetta: offro io! — Oh, grazie mille!", "Camilla, esperá: ¡invito yo! — ¡Ay, muchas gracias!"]],
+               [88, 82])
+    s += nota("<b>ho fame</b> = tengo hambre (con <i>avere</i>, como en español). <b>da bere</b> = para tomar.")
+
+    s += [h2("9. Listino prezzi — Bar Vesuvio (pág. 41)")]
+    s += tabla([["Bevande (bebidas)", "€", "Dolce / Salato", "€"],
+                ["caffè", "1,00", "cornetto", "1,50"], ["cappuccino", "1,50", "pasta", "2,00"],
+                ["latte", "1,20", "panino", "3,10"], ["acqua", "0,50", "toast", "2,90"],
+                ["tè · tè freddo", "1,80 · 2,50", "pizzetta", "2,40"], ["spremuta d'arancia", "3,50", "", ""],
+                ["birra", "3,30", "", ""]],
+               [45, 25, 40, 20])
+    s += sapevi("el <b>Mont-Saint-Michel</b> (del ej. 8 de la tarea) es una isla rocosa en Normandía, Francia, con una abadía en la cima. "
+                "Con la marea alta queda rodeado de agua; las mareas de esa bahía están entre las más grandes de Europa.")
+    s += LETTURE[9]
+    s += ascolta_qr(ASCOLTA_QR[9], "c9")
+    s += ejercicios(ESERCIZI[9])
+    s += tarea("pág. 36, Videocorso, ej. 1 a 4 (con el video) · pág. 38, Test de la Lezione 2 · pág. 195, ej. 1 a 5.")
     return s
 
 

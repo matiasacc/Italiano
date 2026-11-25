@@ -9,6 +9,33 @@ def ascolta(items):
     return s
 
 
+
+def ascolta_qr(items, clave):
+    """items: [tipo, qué, por qué, url]. Agrega una columna con QR para escanear con el celular."""
+    from reportlab.platypus import Table
+    s = [sec("Da ascoltare e da vedere"),
+         Paragraph("<i>Escaneá el QR con la cámara del celular.</i>", INFO)]
+    data = [[Paragraph("<b>Tipo</b>", C), Paragraph("<b>Qué</b>", C), Paragraph("<b>Por qué</b>", C), Paragraph("<b>QR</b>", C)]]
+    for i, (t, q, w, url) in enumerate(items):
+        data.append([Paragraph(t, C), Paragraph(q, C), Paragraph(w, C), qr_img(url, f"{clave}_{i}", 18 * mm)])
+    tb = Table(data, colWidths=[20 * mm, 52 * mm, 76 * mm, 22 * mm], hAlign="LEFT")
+    tb.setStyle(TableStyle([("GRID", (0, 0), (-1, -1), 0.4, LINEA), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                            ("BACKGROUND", (0, 0), (-1, 0), GRIS), ("ALIGN", (3, 0), (3, -1), "CENTER")]))
+    return s + [tb, Spacer(1, 6)]
+
+
+YT = "https://www.youtube.com/results?search_query="
+COMMONS = "https://commons.wikimedia.org/w/index.php?search="
+
+ASCOLTA_QR = {
+9: [["Canción", "<b>Don Raffaè</b> — Fabrizio De André (1990)", "El estribillo es un elogio al café napolitano: <i>\"Ah, che bell' 'o cafè...\"</i> (en dialecto napolitano).", YT + "Fabrizio+De+Andr%C3%A9+Don+Raffa%C3%A8"],
+    ["Canción", "<b>Il caffè della Peppina</b> (Zecchino d'Oro, 1971)", "Canción infantil, pegadiza y muy clara: ideal para fijar vocabulario del café.", YT + "Il+caff%C3%A8+della+Peppina"],
+    ["Video", "Easy Italian: pedir en un bar", "Gente real pidiendo <i>un caffè, un cornetto</i>... con subtítulos en italiano.", YT + "Easy+Italian+bar+caff%C3%A8+ordinare"],
+    ["Película", "<b>Benvenuti al Sud</b> — Luca Miniero (2010)", "Comedia: un milanés trasladado a un pueblo cerca de Nápoles. Mucha comida, mucho café.", YT + "Benvenuti+al+Sud+trailer"],
+    ["Fotos", "Gran Caffè Gambrinus, Napoli", "El bar de la Lettura.", COMMONS + "Gran+Caff%C3%A8+Gambrinus"],
+    ["Fotos", "Mont-Saint-Michel", "El monumento del ej. 8 de la tarea (ver Lo sapevi).", COMMONS + "Mont-Saint-Michel"]],
+}
+
 ASCOLTA = {
 1: [["Canción", "<b>Ciao ciao</b> — La Rappresentante di Lista (Sanremo 2022)", "Repite <i>ciao</i> en todos los tonos: saludo y despedida."],
     ["YouTube", "Canal <b>Easy Italian</b>", "Entrevistas en la calle con subtítulos en italiano. Buscá videos donde la gente se presenta."],
@@ -96,6 +123,17 @@ ESERCIZI = {
     ("¿<i>via</i>, <i>viale</i>, <i>corso</i> o <i>piazza</i>? Una plaza · una calle común · una avenida con árboles · la avenida principal.",
      "piazza · via · viale · corso"),
     ("Traducí: <i>Quisiera inscribirme a un curso de italiano.</i>", "Vorrei iscrivermi a un corso di italiano.")],
+9: [("Pasá al plural: cornetto · bicchiere · pasta · lezione · caffè · bar · yogurt.",
+     "cornetti · bicchieri · paste · lezioni · caffè · bar · yogurt"),
+    ("Completá con <i>prendere</i>: <i>Io ____ un caffè. Tu che cosa ____? Noi ____ due cappuccini. Loro ____ una spremuta.</i>",
+     "prendo · prendi · prendiamo · prendono"),
+    ("Escribí el precio en letras: 1,50 € · 2,90 € · 3,30 € · 0,80 €.",
+     "un euro e cinquanta · due euro e novanta · tre euro e trenta · ottanta centesimi"),
+    ("¿<i>Spremuta</i> o <i>succo</i>? Naranjas exprimidas en el momento · jugo de botella.", "spremuta · succo"),
+    ("En el bar: pedí un cornetto y un cappuccino para vos y preguntá cuánto es.",
+     "Per me un cornetto e un cappuccino, per favore. Quant'è?"),
+    ("Respondé <i>Come stai?</i> si estás muy bien · más o menos · mal.", "Benissimo / Molto bene, grazie · Così così · Male"),
+    ("Corregí: <i>A colazione mangio un biscotti.</i>", "A colazione mangio un biscotto / i biscotti / dei biscotti.")],
 }
 
 

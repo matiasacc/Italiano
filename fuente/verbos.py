@@ -6,7 +6,7 @@ s = [h1("Anexo — Verbos"), info("Tabla de consulta. Se actualiza con cada clas
 s += [Paragraph("1. Mapa de tiempos verbales", H2),
       p("Qué tiempos existen y cuáles vimos. Se completa a medida que avanzamos.")]
 s += tabla([["Modo", "Tiempo", "Equivale en español", "Ej. (parlare)", "Visto"],
-            ["Indicativo", "<b>presente</b>", "presente", "io parlo", "clase 5 y 7"],
+            ["Indicativo", "<b>presente</b>", "presente", "io parlo", "clase 5, 7 y 9"],
             ["Indicativo", "passato prossimo", "pretérito (hablé / he hablado)", "io ho parlato", "(sono nato, clase 7)"],
             ["Indicativo", "imperfetto", "pretérito imperfecto", "io parlavo", ""],
             ["Indicativo", "futuro semplice", "futuro", "io parlerò", ""],
@@ -39,6 +39,14 @@ s += li("<b>-care / -gare</b>: se agrega <b>h</b> delante de i (tu, noi) para ma
         "<b>-iare</b>: la raíz ya termina en i, no se duplica.")
 
 # 3. IRREGULARES
+s += [Paragraph("2.2 Regulares en -ere", H2)]
+s += tabla([["Persona", "Desinenza", "prendere", "ripetere"],
+            ["io", "-o", "prendo", "ripeto"], ["tu", "-i", "prendi", "ripeti"],
+            ["lui / lei / Lei", "<b>-e</b>", "prende", "ripete"], ["noi", "-iamo", "prendiamo", "ripetiamo"],
+            ["voi", "<b>-ete</b>", "prendete", "ripetete"], ["loro", "<b>-ono</b>", "prendono", "ripetono"]],
+           [32, 25, 35, 35])
+s += nota("frente a -are cambian solo lui (-e), voi (-ete) y loro (-ono). Acento de loro en la raíz: PREN-do-no.")
+
 s += [Paragraph("3. Irregulares", H2), p("No siguen la regla: se aprenden de memoria.")]
 s += tabla([["Persona", "ESSERE (ser / estar)", "AVERE (tener)", "FARE (hacer)"],
             ["io", "sono", "ho", "faccio"], ["tu", "sei", "hai", "fai"], ["lui / lei / Lei", "è", "ha", "fa"],
@@ -68,7 +76,8 @@ s += tabla([["Infinitivo", "Español", "Tipo", "Ejemplo", "Clase"],
             ["andare", "ir", "I", "Dove va? (formal)", "8"],
             ["ascoltare", "escuchar", "R -are", "Ascolto la musica.", "162"],
             ["aspettare", "esperar", "R -are", "Aspetto l'autobus.", "162"],
-            ["avere", "tener", "I", "Ho 30 anni.", "3"],
+            ["avere", "tener", "I", "Ho 30 anni. · Ho fame.", "3 · 9"],
+            ["bere", "beber, tomar", "I", "A colazione bevo un caffè.", "9"],
             ["cercare", "buscar", "R -care", "Tu cerchi un lavoro?", "5"],
             ["chiamarsi", "llamarse", "Rf", "Come ti chiami?", "1"],
             ["comprare", "comprar", "R -are", "Compro una pizza.", "162"],
@@ -85,8 +94,10 @@ s += tabla([["Infinitivo", "Español", "Tipo", "Ejemplo", "Clase"],
             ["mangiare", "comer", "R -giare", "Che cosa mangi?", "162"],
             ["pagare", "pagar", "R -gare", "Tu paghi.", "5"],
             ["parlare", "hablar", "R -are", "Parlo spagnolo.", "5"],
+            ["offrire", "invitar, ofrecer", "-ire", "Offro io!", "9"],
             ["pensare", "pensar", "R -are", "Penso a te.", "162"],
             ["potere", "poder", "I", "Può ripetere?", "4"],
+            ["prendere", "tomar (en el bar)", "R -ere", "Io prendo un caffè.", "9"],
             ["riempire", "llenar, completar", "-ire", "Riempi questo modulo.", "5"],
             ["ripetere", "repetir", "R -ere", "Può ripetere?", "4"],
             ["salutare", "saludar", "R -are", "Ti saluto.", "3"],
